@@ -1,0 +1,295 @@
+/* Base Styles */
+.trending-container { background-color: #fff;
+    /* transform: translateX(15%);  */
+
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.trending-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.trending-header h1 {
+  
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.trending-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.75rem;
+  background: #f8f9fa;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #34495e;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  color: #2c3e50;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  background: #f8f9fa;
+}
+
+.tab-btn:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  background: #f8f9fa;
+}
+
+/* Countries Grid */
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.country-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.country-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Image */
+.card-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.country-card:hover .card-image {
+  transform: scale(1.02);
+}
+
+.trending-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e74c3c;
+  color: white;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Content */
+.card-content {
+  padding: 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  margin: 0 0 0.75rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.visitors {
+  color: #7f8c8d;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.visitors::before {
+  content: "•";
+  color: #bdc3c7;
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-bottom: 1rem;
+}
+.show-more-btn {
+  margin-top: 1rem;
+  color: black;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adds space between text and icon */
+}
+.show-more-container {
+  display: flex;
+  justify-content: flex-end; /* Pushes button to the right */
+  margin-top: 1rem; /* Adjust spacing as needed */
+}
+.show-more-btn:hover{
+  text-decoration: underline;
+  background-color: #fff;
+}
+.show-more-icon {
+  transition: transform 0.3s ease; /* Optional: Adds animation */
+}
+
+/* Rotate icon when expanded (if needed) */
+.show-more-btn.expanded .show-more-icon {
+  transform: rotate(180deg);
+}
+.description.show {
+  max-height: 300px;
+}
+
+.description p {
+  margin-bottom: 1.75rem;
+  color: #34495e;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.explore-btn {
+  background: #6B878B;
+  color: white;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.explore-btn:hover {
+  background: #6B878B;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(41, 128, 185, 0.2);
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: #6B878B;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: auto;
+  padding: 0.5rem;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+  background-color: #f8f9fa;
+  /* color: #2980b9; */
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.expand-btn::after {
+  transition: transform 0.3s ease;
+}
+
+.expand-btn:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .trending-container {
+    padding: 0 2rem;
+  }
+  
+  .countries-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .trending-header h1 {
+    font-size: 2rem;
+  }
+  
+  .trending-header p {
+    font-size: 1rem;
+  }
+  
+  .filter-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.8rem;
+    scrollbar-width: thin;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .tab-btn {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .trending-container {
+    padding: 0 1.25rem;
+  }
+  
+  .countries-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-image {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+}

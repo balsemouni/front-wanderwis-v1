@@ -1,0 +1,263 @@
+:root {
+  /* Primary Teal Color Palette */
+  --primary-color: #6B878B;
+  --primary-light: #8CA1A5;
+  --primary-lighter: #ADC3C7;
+  --primary-lightest: #CEDFE2;
+  --primary-dark: #4A6D72;
+  --primary-darker: #2A5359;
+  
+  /* Text Colors */
+  --text-black: #000000;
+  --text-dark: #333333;
+  --text-medium: #666666;
+  --text-light: #999999;
+  --text-white: #FFFFFF;
+  
+  /* Backgrounds */
+  --bg-white: #FFFFFF;
+  --bg-light: #F5F5F5;
+  
+  /* Divider */
+  --divider-color: #E0E0E0;
+}
+
+.admin-container {
+    transform: translatex(10%);
+
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+.dashboard-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  color: var(--text-black);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.last-updated {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: var(--bg-white);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+  flex-shrink: 0;
+  background-color:white;
+  color: #6C4F6B;
+}
+
+.stat-content h3 {
+  color: var(--text-black);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0.2rem 0;
+}
+
+.stat-change {
+  font-size: 0.8rem;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+.data-visualization {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .data-visualization {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.section-icon {
+  color: #6C4F6B;
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.section-header h2 {
+  color: var(--text-black);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.continent-section, .countries-section {
+  background: var(--bg-white);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.continent-visualization {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .continent-visualization {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.continent-chart {
+  height: 25rem;
+  width: 120%;
+  padding: 1rem;
+}
+
+.continent-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.continent-rank {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.continent-name {
+  font-weight: 600;
+  color: var(--text-black);
+  margin-right: 0.8rem;
+}
+
+.continent-travelers {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--primary-lightest);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  background-color: var(--primary-color);
+}
+
+.countries-chart {
+  height: 400px;
+}
+
+/* Chart Styling */
+.recharts-pie-label-text {
+  fill: var(--text-black);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.recharts-legend-item-text {
+  color: var(--text-black) !important;
+}
+
+.recharts-tooltip {
+  background-color: var(--primary-dark) !important;
+  color: var(--text-white) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+.recharts-bar-rectangle {
+  fill: var(--primary-color);
+  fill-opacity: 0.8;
+}
+
+.recharts-bar-rectangle:hover {
+  fill-opacity: 1;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--primary-lightest);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

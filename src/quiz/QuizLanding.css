@@ -1,0 +1,151 @@
+.quiz-landing {
+        /* transform: translateX(10%);  */
+
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.landing-container {
+  max-width: 1200px;
+  background: white;
+  border-radius: 20px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+  padding: 3rem;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.landing-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  flex: 1;
+  min-width: 250px;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.quiz-info {
+  margin-left: 20rem;
+  width: 50%;
+  /* background:#DBDCDD; */
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+.quiz-info h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.steps-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+}
+
+.steps-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.action-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.start-quiz-btn {
+  background: #6B878B;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.start-quiz-btn:hover {
+  background:  #8CA1A4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.small-note {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 1rem;
+}
+
+.testimonial-section {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonial-section footer {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-style: normal;
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .features-section {
+    flex-direction: column;
+  }
+  
+  .landing-header h1 {
+    font-size: 2rem;
+  }
+}

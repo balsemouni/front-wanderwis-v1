@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+/* background-color: #728B90; */
+height: 7rem;
+  z-index: 888;
+  margin-left: 8.5rem;
+  width: 120%;
+  margin-top: -2.2rem;
+  padding: 0rem 0;
+}
+
+.navbar-container {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0rem;
+}
+
+.navbar-brand {
+  margin-left: -5rem;
+  height: 8rem;
+  width: 15rem;
+/* background-color: ; */
+  background-image: url("../../public/images/w__2_-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Fills the entire container (may crop edges) */
+  background-position: start;
+}
+
+.nav-links {
+    height: 5rem;
+
+  margin-left: 30%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1.4rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #666;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #666;
+  transition: width 0.6s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Special styling for profile link */
+.profile-link-container {
+  margin-left: -1rem; /* Pushes profile to the end */
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.profile-link:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.profile-icon {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content_1,
+  .content_2 {
+    width: 45vw;
+    height: 20vh;
+    top: 10%;
+  }
+
+  .content_3 {
+    width: 90%;
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .profile-link {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content_1,
+  .content_2 {
+    width: 50vw;
+    height: 25vh;
+    top: 15%;
+  }
+
+  .content_3 {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .profile-link {
+    padding: 0.3rem 0.6rem;
+  }
+
+  .profile-link span {
+    display: none; /* Hide "Profile" text on very small screens */
+  }
+
+  .profile-icon {
+    font-size: 1.2rem;
+  }
+}

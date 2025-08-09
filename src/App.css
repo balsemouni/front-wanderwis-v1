@@ -1,0 +1,33 @@
+/* Reset all margins/paddings and include border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Uncommented - crucial for proper sizing */
+}
+
+/* Ensure full viewport coverage */
+html, body, #root {
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+.app-container { background-color: #fff;
+  width: 120%;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar full width */
+
+
+/* Main content takes available space */
+.main-content {
+  flex: 1;
+  width: 100%; /* Explicit width */
+}
+
+/* Footer full width */
+
